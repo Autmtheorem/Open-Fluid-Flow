@@ -17,9 +17,10 @@ Mat::Mat(const Mat& matrix)
 {
   this->rows = matrix.rows;
   this->columns = matrix.columns;
+  this->values = new float[rows*columns];
 
-  this->values = new float[(this->rows)*(this->columns)];
-  memcpy(this->values, matrix.values, this->rows*this->columns*sizeof(float));
+  
+  memcpy(this->values, matrix.values,(rows*columns)*sizeof(float));
 }
 
 int Mat::numberOfRows()
@@ -40,7 +41,7 @@ void Mat::insert(int row, int column, float value)
     throw "invalid index";
   }
 
-  this->values[(row*this->columns)+column] = value;
+  values[(row*this->columns)+column] = value;
 }
 
 // destructor
@@ -61,7 +62,7 @@ float& Mat::operator()(const int row, const int column)
 }
 
 
-Mat& Mat::operator+ (Mat& matrix)
+Mat Mat::operator+ (Mat& matrix)
 {
   // matrices must be exactly equal for addition
   if (this->rows != matrix.numberOfRows() || this->columns != matrix.numberOfColumns())

@@ -2,6 +2,7 @@
 #ifndef MAT_H
 #define MAT_H
 #include <string.h>
+#include <iostream>
 struct Mat
 {
 private:
@@ -19,7 +20,7 @@ public:
   // Operators
   float& operator() (const int row, const int column);
   Mat& operator* (const float scalar);
-  Mat& operator+ (Mat& matrix);
+  Mat  operator+ (Mat& matrix);
 };
 
 #endif
