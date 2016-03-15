@@ -14,11 +14,12 @@ public:
   ~Mat();
   int numberOfRows();
   int numberOfColumns();
+  void insert(int row, int column, float value);
 
   // Operators
   float& operator() (const int row, const int column);
   Mat& operator* (const float scalar);
-  Mat& operator+ (const Mat& matrix);
+  Mat& operator+ (Mat& matrix);
 };
 
 #endif
