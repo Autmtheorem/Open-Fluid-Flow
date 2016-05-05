@@ -14,5 +14,5 @@ Wave2D::Wave2D(float dt, float speed, float decay)
 // integeration function (finite difference method)
 Mesh2D Wave2D::integrate(Mesh2D mesh)
 {
-  
+  Mesh2D future = 
 }
