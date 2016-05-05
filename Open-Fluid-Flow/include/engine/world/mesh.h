@@ -3,24 +3,28 @@
 #define MESH_H
 #include <string.h>
 #include <iostream>
-struct Mesh
+
+// represents a single dimensional mesh
+struct Mesh1D
 {
 private:
-  int rows, columns;
   float* values;
+  float dx;
 
 public:
-  Mat(int numRows, int numCols);
-  Mat(const Mat& matrix);
-  ~Mat();
-  int numberOfRows();
-  int numberOfColumns();
-  void insert(int row, int column, float value);
-  
-  // Operators
-  float& operator() (const int row, const int column);
-  Mat& operator* (const float scalar);
-  Mat  operator+ (Mat& matrix);
+  Mesh1D(size, dx);
+};
+
+// represents a two dimensional mesh
+struct Mesh2D
+{
+
+};
+
+// represents a three dimensional mesh
+struct Mesh3D
+{
+
 };
 
 #endif
