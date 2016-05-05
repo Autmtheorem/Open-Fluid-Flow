@@ -3,6 +3,8 @@
 #include <vector>
 #include "engine/world/mesh.h"
 
+// worry about this last forget it for now
+
 // represents a 1D world of meshes
 struct MeshWorld1D
 {

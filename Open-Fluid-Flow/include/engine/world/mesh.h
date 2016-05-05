@@ -4,7 +4,7 @@
 #include "math/mat.h"
 
 
-// represents a single dimensional mesh (2D solution)
+// represents a single dimensional mesh (2D solution)(ignore for now)
 struct Mesh1D
 {
 private:
@@ -12,20 +12,18 @@ private:
   float dx;
 
 public:
-  Mesh1D(size, dx);
+  Mesh1D(int size, float dx);
 };
 
-// represents a two dimensional mesh (3D solution)
+
+// represents a two dimensional mesh (3D solution)(core to work on)
 struct Mesh2D
 {
-  Mat* mesh;
-  
-};
+  Mat* mesh; // represents the mesh
+  float dx; // spatial step (making both steps equal)
 
-// represents a three dimensional mesh (this would give a 4D solution)
-struct Mesh3D
-{
-
+  // constructor
+  Mesh2D(int x, int y,float dx);
 };
 
 #endif

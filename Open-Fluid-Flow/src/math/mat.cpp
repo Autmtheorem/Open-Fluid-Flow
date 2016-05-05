@@ -19,7 +19,7 @@ Mat::Mat(const Mat& matrix)
   this->columns = matrix.columns;
   this->values = new float[rows*columns];
 
-  
+
   memcpy(this->values, matrix.values,(rows*columns)*sizeof(float));
 }
 
