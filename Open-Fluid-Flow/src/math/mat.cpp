@@ -10,6 +10,12 @@ Mat::Mat(int numRows, int numCols)
   this->columns = numCols;
 
   values = new float[numRows*numCols];
+
+  // Zero the matrix by default
+  for(int counter = 0; counter < numRows*numCols; counter++)
+  {
+    values[counter] = 0.0f
+  }
 }
 
 // copy constructor

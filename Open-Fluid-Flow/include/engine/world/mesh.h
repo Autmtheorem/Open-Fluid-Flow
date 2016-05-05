@@ -21,7 +21,7 @@ struct Mesh2D
 {
   Mat* mesh; // represents the mesh
   float dx; // spatial step (making both steps equal)
-
+  
   // constructor
   Mesh2D(int x, int y,float dx);
 };
