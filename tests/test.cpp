@@ -7,21 +7,21 @@ int main()
 {
   Mat matrix(3,3);
   Mat matrix2(3,3);
-  for(int i = 0; i < 3; i++)
+  /*for(int i = 0; i < 3; i++)
   {
     for(int j = 0; j < 3; j++)
     {
       matrix.insert(i,j,4.2);
     }
-  }
+  }*/
 
-  for(int i = 0; i < 3; i++)
+  /*for(int i = 0; i < 3; i++)
   {
     for(int j = 0; j < 3; j++)
     {
       matrix2.insert(i,j,4.5);
     }
-  }
+  }*/
 
 
   // Additon test
