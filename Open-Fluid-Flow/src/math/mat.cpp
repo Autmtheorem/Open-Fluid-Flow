@@ -10,6 +10,12 @@ Mat::Mat(int numRows, int numCols)
   this->columns = numCols;
 
   values = new float[numRows*numCols];
+
+  // Zero the matrix by default
+  for(int counter = 0; counter < numRows*numCols; counter++)
+  {
+    values[counter] = 0.0f;
+  }
 }
 
 // copy constructor
@@ -19,7 +25,7 @@ Mat::Mat(const Mat& matrix)
   this->columns = matrix.columns;
   this->values = new float[rows*columns];
 
-  
+
   memcpy(this->values, matrix.values,(rows*columns)*sizeof(float));
 }
 
