@@ -6,6 +6,6 @@
 Mesh2D::Mesh2D(int x, int y, float dx)
 {
   // initalize the mesh
-  this->mesh = new Mat(x,y); // should this be dynamic??
+  this->grid = new Mat(x,y);
   this->dx = dx;
 }
