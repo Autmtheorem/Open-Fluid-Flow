@@ -19,9 +19,9 @@ public:
 // represents a two dimensional mesh (3D solution)(core to work on)
 struct Mesh2D
 {
-  Mat* mesh; // represents the mesh
+  Mat* grid; // represents the mesh
   float dx; // spatial step (making both steps equal)
-  
+
   // constructor
   Mesh2D(int x, int y,float dx);
 };
