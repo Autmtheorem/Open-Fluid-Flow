@@ -3,7 +3,7 @@
 #include "engine/world/mesh.h"
 #include "math/mat.h"
 
-// represents equation of 2D wave equation
+// represents equation of 2D wave equation (I think there should be a solver base class??)
 struct Wave2D
 {
   float dt; // time step (should this be in meshworld??)(Leave here for now?)
