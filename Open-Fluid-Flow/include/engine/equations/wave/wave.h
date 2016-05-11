@@ -1,7 +1,7 @@
 #ifndef WAVE_H
 #define WAVE_H
 #include "engine/world/mesh.h"
-#include "math/mat.h"
+#include "math/matrix/mat.h"
 
 // represents equation of 2D wave equation (I think there should be a solver base class??)
 struct Wave2D

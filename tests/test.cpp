@@ -1,6 +1,6 @@
 /*File used to test the lib*/
 
-#include "math/mat.h"
+#include "math/matrix/mat.h"
 #include "engine/world/mesh.h"
 #include <iostream>
 

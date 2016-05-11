@@ -1,6 +1,6 @@
 // implementation of the 2D mesh
 #include "engine/world/mesh.h"
-#include "math/mat.h"
+#include "math/matrix/mat.h"
 
 // The mesh constructor
 Mesh2D::Mesh2D(int x, int y, float dx)

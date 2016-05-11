@@ -1,4 +1,4 @@
-#include "math/mat.h"
+#include "math/matrix/mat.h"
 Mat::Mat(int numRows, int numCols)
 {
   if (numRows <= 0 && numCols <= 0)

@@ -1,4 +1,4 @@
-#include "engine/wave/wave.h"
+#include "engine/equations/wave/wave.h"
 #include "engine/world/mesh.h"
 // constructor
 Wave2D::Wave2D(float dt, float speed, float decay)
