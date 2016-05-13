@@ -20,11 +20,13 @@ Mesh2D Wave2D::integrate(Mesh2D mesh, Mat kernel)
   float calc_2 = (-1 + (this->decay*this->dt)); // constant for second term
   float calc_3 = ((this->speed*this->speed)*(this->dt*this->dt))/(mesh.dx); // constant for third term
 
-  //Mesh2D future = (calc_1)*(*(mesh.grid))+(calc_2)*(*(this->previous))+convolution((*(mesh.grid)), kernel);
-  //Mesh2D future = ((calc_1)*(*(mesh.grid)))+((calc_2)*(*(this->previous->grid)))+convolution((*(mesh->grid)), kernel);
-  Mesh2D future = (*(mesh.grid))*calc_1;
+  // FDM with convolution
+  /**(mesh.grid) = ((*(mesh.grid))*calc_1);
+  *(mesh.grid) = ((*(this->previous->grid))*calc_2)+(*(mesh.grid));
+  *(mesh.grid) = (convolution(*(mesh.grid), kernel)*calc_3) + (*(mesh.grid));*/
 
+  // future and previous
+  Mesh2D future = mesh;
   this->previous = &mesh;
-
   return future;
 }

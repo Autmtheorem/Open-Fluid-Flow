@@ -24,6 +24,7 @@ struct Mesh2D
 
   // constructor
   Mesh2D(int x, int y,float dx);
+  Mesh2D(const Mesh2D& mesh);
 };
 
 #endif

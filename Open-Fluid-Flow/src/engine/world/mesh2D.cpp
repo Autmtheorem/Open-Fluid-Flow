@@ -9,3 +9,11 @@ Mesh2D::Mesh2D(int x, int y, float dx)
   this->grid = new Mat(x,y);
   this->dx = dx;
 }
+
+// Mesh copy constructor
+Mesh2D::Mesh2D(const Mesh2D& mesh)
+{
+  // members
+  this->dx = mesh.dx;
+  this->grid = mesh.grid;
+}

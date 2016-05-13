@@ -92,4 +92,21 @@ Mat Mat::operator+ (Mat& matrix)
   return result;
 }
 
-// TODO: need to implement multiplication operator
+// Matrix scalar multiplication
+Mat Mat::operator* (const float scalar)
+{
+  Mat result(this->rows, this->columns); // result matrix
+  float scalarResult;
+
+  // apply scalar matrix multiplication
+  for(int row = 0; row < this->rows; row++)
+  {
+    for(int column = 0; column < this->columns; column++)
+    {
+      scalarResult = scalar*this->values[(row*this->columns)+column];
+      result.insert(row,column,scalarResult);
+    }
+  }
+
+  return result;
+}

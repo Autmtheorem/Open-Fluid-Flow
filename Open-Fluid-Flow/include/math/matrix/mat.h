@@ -19,7 +19,7 @@ public:
 
   // Operators
   float& operator() (const int row, const int column);
-  Mat& operator* (const float scalar);
+  Mat operator* (const float scalar);
   Mat  operator+ (Mat& matrix);
 };
 
