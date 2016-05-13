@@ -12,7 +12,7 @@ struct Wave2D
   Mesh2D* previous; // The mesh from the pervious time step
 
   // constructor
-  Wave2D(float dt, float speed, float decay, Mesh2D current);
+  Wave2D(Mesh2D* current, float dt, float speed, float decay);
   // integerates the solution (The current mesh will be the passed in one)
   Mesh2D integrate(Mesh2D mesh, Mat kernel);
 

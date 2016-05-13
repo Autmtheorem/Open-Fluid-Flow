@@ -91,3 +91,5 @@ Mat Mat::operator+ (Mat& matrix)
 
   return result;
 }
+
+// TODO: need to implement multiplication operator
