@@ -9,12 +9,12 @@ struct Wave2D
   float dt; // time step (should this be in meshworld??)(Leave here for now?)
   float speed; // wave speed
   float decay; // decay factor
-  //Mesh2D previous; // The mesh from the pervious time step
+  Mesh2D* previous; // The mesh from the pervious time step
 
   // constructor
-  Wave2D(float dt, float speed, float decay);
+  Wave2D(float dt, float speed, float decay, Mesh2D current);
   // integerates the solution (The current mesh will be the passed in one)
-  Mesh2D integrate(Mesh2D mesh);
+  Mesh2D integrate(Mesh2D mesh, Mat kernel);
 
   // Calculates the convolution between the two matrices
   Mat convolution(Mat A, Mat B);
