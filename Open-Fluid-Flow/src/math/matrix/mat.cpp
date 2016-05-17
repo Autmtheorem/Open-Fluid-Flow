@@ -1,4 +1,4 @@
-#include "math/mat.h"
+#include "math/matrix/mat.h"
 Mat::Mat(int numRows, int numCols)
 {
   if (numRows <= 0 && numCols <= 0)
@@ -86,6 +86,25 @@ Mat Mat::operator+ (Mat& matrix)
       // is this even legal???
       addedResult = this->values[(row*this->columns)+column] + matrix(row,column);
       result.insert(row,column,addedResult);
+    }
+  }
+
+  return result;
+}
+
+// Matrix scalar multiplication
+Mat Mat::operator* (const float scalar)
+{
+  Mat result(this->rows, this->columns); // result matrix
+  float scalarResult;
+
+  // apply scalar matrix multiplication
+  for(int row = 0; row < this->rows; row++)
+  {
+    for(int column = 0; column < this->columns; column++)
+    {
+      scalarResult = scalar*this->values[(row*this->columns)+column];
+      result.insert(row,column,scalarResult);
     }
   }
 

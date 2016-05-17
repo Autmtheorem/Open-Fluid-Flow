@@ -1,7 +1,7 @@
 // Dense Matrix eventually make this generic
 #ifndef MESH_H
 #define MESH_H
-#include "math/mat.h"
+#include "math/matrix/mat.h"
 
 
 // represents a single dimensional mesh (2D solution)(ignore for now)
@@ -24,6 +24,7 @@ struct Mesh2D
 
   // constructor
   Mesh2D(int x, int y,float dx);
+  Mesh2D(const Mesh2D& mesh);
 };
 
 #endif
